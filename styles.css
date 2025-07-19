@@ -1,0 +1,1107 @@
+/* SCROLLBAR CUSTOMIZATION */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(180, 180, 180);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(210, 210, 210);
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(100, 100, 100);
+}
+
+/* GLOBAL STYLES FOR THE ENTIRE PAGE */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(180, 180, 180);
+    height: 100%;
+}
+
+/* HOMEPAGE -> PROFILE CUSTOMIZATIONS */
+.profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(to bottom, rgb(15, 32, 66), rgb(39, 101, 184));
+    background-position: center;
+    background-size: cover;
+}
+
+.profile-image {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+    border-style: solid;
+    border-color: rgb(190, 190, 190);
+    border-width: 4px;
+    width: 230px;
+    height: 230px;
+    border-radius: 120px;
+}
+
+.profile-buttons-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.name {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(190, 190, 190);
+    font-family: "Dosis", sans-serif;
+    font-size: 65px;
+    font-weight: 400;
+    height: 20px;
+}
+
+.job {
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(170, 170, 170);
+    font-family: "Dosis", sans-serif;
+    font-size: 35px;
+}
+
+.location {
+    text-align: center;
+    color: rgb(160, 160, 160);
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.date-button,
+.contact-button {
+    cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgb(15, 32, 66);
+    color: rgb(160, 160, 160);
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    transition: all 0.6s;
+}
+
+.date-button:hover,
+.contact-button:hover {
+    color: rgb(140, 140, 140);
+    background-color: #122e53;
+}
+
+/* HEADER CUSTOMIZATIONS */
+.header-set {
+    z-index: 1001;
+    background-size: cover;
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    top: 610px;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-set.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-set.hidden {
+    top: -90px;
+}
+
+.left-section {
+    padding-top: 2px;
+    padding-left: 2px;
+    background-color: rgb(18, 46, 83);
+    display: grid;
+    grid-template-columns: 80px 120px;
+}
+
+.header-left {
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+    border-style: solid;
+    border-color: rgb(190, 190, 190);
+}
+
+.header-left-name {
+    font-family: "Dosis", sans-serif;
+    font-size: large;
+    color: rgb(190, 190, 190);
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+.middle-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    background-color: rgb(18, 46, 83);
+}
+
+.middle-section>div>a>button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 110%;
+    background-color: rgb(33, 79, 140);
+    border: none;
+    color: rgb(190, 190, 190);
+    font-family: "Dosis", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.8s;
+}
+
+.middle-section button.active {
+    color: rgb(170, 170, 170);
+    background-color: rgb(39, 101, 184);
+}
+
+.middle-section>div>a>button:hover {
+    color: rgb(170, 170, 170);
+    background-color: rgb(39, 101, 184);
+}
+
+.right-section {
+    background-color: rgb(18, 46, 83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+
+.right-section>a>button {
+    cursor: pointer;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgb(39, 101, 184);
+    color: rgb(190, 190, 190);
+    font-size: 80%;
+    border: none;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    transition: all 0.5s;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.right-section>a>button:hover {
+    background-color: rgb(33, 79, 140);
+}
+
+.right-section>a>button {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* CONTENT SECTION */
+.main {
+    margin-top: 725px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(180, 180, 180);
+}
+
+/* ABOUT SECTION */
+.about-title {
+    color: rgb(15, 32, 66);
+    font-weight: 600;
+}
+
+.about {
+    color: black;
+    font-family: "Dosis", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 115px;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.about-logo,
+.education-logo,
+.interest-logo,
+.social-media-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.about-text {
+    background-color: rgb(190, 190, 190);
+    margin-top: 70px;
+    margin-left: 70px;
+    padding: 10px;
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    width: 300px;
+    max-height: 280px;
+    border-radius: 10px;
+}
+
+.education {
+    font-family: "Dosis", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.education-text {
+    margin-top: 70px;
+    padding: 15px;
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    width: 300px;
+    height: 220px;
+    background-color: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+.interest-text {
+    font-size: 20px;
+    margin-top: 70px;
+    padding: 10px;
+    width: 300px;
+    background-color: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+.interest-list {
+    text-align: start;
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    font-weight: 300px;
+    overflow: hidden;
+    max-height: 130px;
+    transition: max-height 0.5s ease-out;
+}
+
+.interest-list.expanded {
+    max-height: 768px;
+}
+
+.show-everything-button {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 15px;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #0f2042;
+    color: rgb(170, 170, 170);
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    transition: all 0.6s;
+}
+
+.show-everything-button:hover {
+    color: rgb(170, 170, 170);
+    background-color: rgb(18, 46, 83);
+}
+
+.social-media-text {
+    padding: 10px;
+    margin-top: 70px;
+    margin-right: 70px;
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    font-weight: 300px;
+    width: 300px;
+    height: 190px;
+    background-color: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+.social-media-image {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+/* APPOINTMENT SECTION */
+.schedule {
+    color: rgb(15, 32, 66);
+    padding-top: 105px;
+    font-family: "Dosis", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.schedule-section {
+    margin-top: 44px;
+    height: 1245px;
+}
+
+.schedule-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 52px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.adress-container {
+    color: black;
+    font-family: "Dosis", sans-serif;
+    text-align: start;
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 30px;
+    font-weight: 400;
+    height: 100%;
+    width: 50%;
+}
+
+.adress {
+    font-size: 20px;
+    padding-top: 0px;
+}
+
+.call-image {
+    vertical-align: middle;
+    padding-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.contact-text {
+    padding-top: 5%;
+    font-size: 60%;
+    font-weight: 400;
+}
+
+/* LEAFLET MAP CUSTOMIZATION */
+#map {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+}
+
+/* APPOINTMENT BOOKING -> TABLE SECTION */
+.date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 52px;
+    margin: 100px;
+    margin-top: 36px;
+    height: 710px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    font-size: 40px;
+    padding-top: 30px;
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(220, 220, 220);
+    margin-top: 40px;
+    height: 500px;
+    width: 90%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.time-button {
+    margin-top: 15px;
+    font-family: "Dosis", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #0f2042;
+    color: rgb(160, 160, 160);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.time-button:hover {
+    background-color: rgb(18, 46, 83);
+    color: rgb(140, 140, 140);
+}
+
+.show-details-button {
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: #0f2042;
+    border: none;
+    border-radius: 75px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    transition: all 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show-details-button:hover {
+    background-color: rgb(18, 46, 83);
+    color: rgb(140, 140, 140);
+}
+
+/* SERVICES SECTION */
+.services {
+    font-size: 40px;
+    font-weight: 600;
+    color: #0f2042;
+    padding-top: 105px;
+    font-family: "Dosis", sans-serif;
+    text-align: center;
+}
+
+.services-container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* SEARCH BUTTON CUSTOMIZATION */
+#search {
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    width: 97%;
+    border-style: solid;
+    border-color: #0f2042;
+    max-width: 800px;
+    padding: 10px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* SERVICES -> ACCORDION MENU CUSTOMIZATION */
+#accordion {
+    width: 100%;
+    background-color: rgb(160, 160, 160);
+}
+
+.accordion-item {
+    border-bottom: 1px solid white;
+}
+
+.accordion-header {
+    padding: 10px;
+    font-size: 25px;
+    background-color: #0f2042;
+    color: rgb(160, 160, 160);
+    cursor: pointer;
+}
+
+.accordion-content {
+    border-style: solid;
+    border-color: rgb(18, 46, 83);
+    display: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.accordion-content p {
+    border-bottom: 1px solid rgb(190, 190, 190);
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.accordion-header.active {
+    background-color: rgb(18, 46, 83);
+    color: rgb(140, 140, 140);
+}
+
+/* FEEDBACK SECTION */
+.comments {
+    color: #0f2042;
+    background-color: rgb(180, 180, 180);
+    padding-top: 65px;
+    font-family: "Dosis", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.comments-container {
+    padding-top: 45px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: rgb(180, 180, 180);
+}
+
+.comments-box {
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 300;
+    text-align: start;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: opacity 0.5s ease-out;
+    overflow: hidden;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.comments-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-button {
+    cursor: pointer;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.comments-content {
+    display: none;
+}
+
+.rate-image {
+    border-radius: 10px;
+    display: block;
+    margin-top: 20px;
+    max-width: 40%;
+    max-height: 50%;
+    height: auto;
+}
+
+.comments-box:nth-child(n+7) {
+    display: none;
+}
+
+.comments-show {
+    margin-top: 200px;
+    width: 100%;
+    height: 50px;
+}
+
+.show-more-button {
+    margin: auto;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #0f2042;
+    border-style: none;
+    border-radius: 100px;
+    width: 150px;
+    height: 40px;
+    font-family: "Dosis", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    transition: all 0.6s;
+}
+
+.show-more-button:hover {
+    background-color: rgb(18, 46, 83);
+    color: rgb(140, 140, 140);
+}
+
+/* GALLERY SECTION */
+.gallery {
+    color: rgb(15, 32, 66);
+    font-weight: 600;
+    padding-top: 45px;
+    font-family: "Dosis", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    background-color: rgb(180, 180, 180);
+}
+
+.gallery-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-container>div {
+    width: fit-content;
+}
+
+.gallery-container img {
+    border: 10px solid rgb(15, 32, 66);
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.07);
+    border-color: rgba(18, 46, 83, 0.8);
+}
+
+.gallery-show {
+    margin-top: 70px;
+    width: 100%;
+    height: 60px;
+}
+
+/* FOOTER PROFILE SECTION */
+.end-profile {
+    margin-top: 90px;
+    width: 100%;
+    height: 480px;
+    background: linear-gradient(to bottom, rgb(15, 32, 66), rgb(39, 101, 184));
+    background-position: center;
+    background-size: cover;
+    padding-top: 45px;
+}
+
+.end-profile-image {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-style: solid;
+    border-color: rgb(190, 190, 190);
+    border-width: 4px;
+    width: 230px;
+    height: 230px;
+    border-radius: 115px;
+}
+
+.end-text {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(190, 190, 190);
+    font-family: "Dosis", sans-serif;
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.end {
+    height: 70px;
+}
+
+/* SCROLL-TO-TOP BUTTON STYLING */
+#scrollTopButton {
+    position: relative;
+    margin-top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0f2042;
+    color: rgb(160, 160, 160);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    transition: all 0.6s;
+}
+
+#scrollTopButton:hover {
+    color: rgb(140, 140, 140);
+    background-color: rgb(18, 46, 83);
+}
+
+#scrollTopButton i {
+    font-size: 25px;
+}
+
+/* FOOTER SECTION */
+.footer {
+    color: #0f2042;
+    font-family: "Dosis", sans-serif;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    background-color: rgb(180, 180, 180);
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+
+    .about-section {
+        gap: 10px;
+    }
+
+    .about-text,
+    .education-text,
+    .interest-text,
+    .interest-list,
+    .social-media-text {
+        font-size: 16px;
+    }
+
+    .comments-box {
+        font-size: 18px;
+    }
+
+    .contact-button,
+    .date-button {
+        margin-top: 20px;
+    }
+
+    #scrollTopButton {
+        margin-top: 20px;
+    }
+
+    .end-text {
+        margin-top: 20px;
+    }
+
+    .end-profile-image {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .header-left-name {
+        font-size: 14px;
+        text-align: center;
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+
+    .middle-section {
+        padding-left: 40px;
+    }
+
+    .middle-section>div>a>button {
+        width: 90%;
+        height: 100%;
+        font-size: 80%;
+    }
+
+    #home-button,
+    #about-button,
+    #contact-button-2 {
+        padding-right: 14px;
+    }
+
+    #services-button,
+    #comments-button {
+        padding-right: 12px;
+    }
+
+    .right-section>a>button {
+        display: none;
+    }
+
+    .about-section {
+        gap: 10px;
+    }
+
+    .about-text,
+    .education-text,
+    .interest-text,
+    .interest-list,
+    .social-media-text {
+        font-size: 13px;
+    }
+
+    .comments-box {
+        font-size: 14px;
+    }
+
+    .clinic-name {
+        font-size: 18px;
+    }
+
+    .adress {
+        font-size: 15px;
+    }
+
+    .contact-text {
+        padding-top: 90px;
+        font-size: 14px;
+    }
+
+    .gallery-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-button,
+    .date-button {
+        margin-top: 20px;
+    }
+
+    #scrollTopButton {
+        margin-top: 20px;
+    }
+
+    .end-text {
+        margin-top: 20px;
+    }
+
+    .end-profile-image {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .name {
+        font-size: 40px;
+    }
+
+    .job {
+        font-size: 35px;
+    }
+
+    .home {
+        height: 600px;
+    }
+
+    .left-section,
+    .right-section,
+    .header-set {
+        display: none;
+    }
+
+    .profile {
+        height: 100%;
+        width: 100%;
+    }
+
+    .profile-image {
+        margin-top: 100px;
+    }
+
+    about {
+        padding-top: 10px;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-text {
+        margin-left: 0px;
+    }
+
+    .social-media-text {
+        margin-right: 0px;
+    }
+
+    .schedule {
+        background-color: rgb(180, 180, 180);
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .schedule-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .schedule-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+    }
+
+    .adress-container {
+        width: 90%;
+        height: 280px;
+        padding: 5px;
+        background-color: rgb(190, 190, 190);
+        border-radius: 10px;
+    }
+
+    .clinic-name {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .adress {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .contact-text {
+        font-size: 16px;
+    }
+
+    .call-image {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    #map {
+        width: 90%;
+        height: 200px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    .date-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 90%;
+        background-color: rgb(190, 190, 190);
+        border-radius: 10px;
+    }
+
+    .date-picker {
+        overflow-x: auto;
+    }
+
+    .dates {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .date {
+        min-width: 120px;
+        padding: 10px;
+        border: 1px solid #0f2042;
+        border-radius: 8px;
+        background-color: #f0f8ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .time-button {
+        margin-top: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        border: none;
+        background-color: #0f2042;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .show-details-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #0f2042;
+        color: white;
+        border-radius: 50px;
+        text-decoration: none;
+    }
+
+    .show-details-button:hover {
+        background-color: #14567d;
+    }
+
+    .services {
+        margin-top: 145px;
+    }
+
+    #search {
+        padding: 3px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .comments,
+    .gallery {
+        padding-top: 105px;
+    }
+
+    .comments-show,
+    .gallery-show {
+        display: none;
+    }
+
+    .comments-box {
+        font-size: 16px;
+    }
+
+    .end-text {
+        font-size: 40px;
+    }
+
+    #scrollTopButton {
+        margin-top: 30px;
+    }
+
+    .footer {
+        font-size: 20px;
+    }
+}

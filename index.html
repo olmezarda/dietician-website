@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="tr" region="tr">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Title -->
+    <title>Dyt. Ad Soyad - Diyetisyen, İl</title>
+    <!-- Link -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Homepage -->
+    <div id="home" class="profile">
+        <div>
+            <img class="profile-image" src="images/profile_photo.jpeg">
+        </div>
+        <div>
+            <p class="name">Dyt. Ad <b>Soyad</b></p>
+        </div>
+        <div>
+            <p class="job">Diyetisyen</p>
+        </div>
+        <div class="location">
+            <img src="images/pin.png" style="width: 20px;">
+            İl
+        </div>
+        <div class="profile-buttons-section">
+            <a href="#contact"><button class="date-button">RANDEVU
+                    ALIN</button></a>
+            <a href="#contact"><button class="contact-button">İLETİŞİM
+                    KURUN</button></a>
+        </div>
+    </div>
+    <!-- End of Homepage -->
+    <!-- Header -->
+    <!-- Header set => Divides the header into 3 parts for responsive layout -->
+    <div class="header-set">
+        <!-- Left part of the header -->
+        <div class="left-section">
+            <img class="header-left" src="images/profile_photo.jpeg">
+            <p class="header-left-name"><b>Dyt. Ad Soyad</b> Diyetisyen</p>
+        </div>
+        <!-- Middle part of the header divided into 6 sections for responsiveness -->
+        <div class="middle-section" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;">
+            <div>
+                <!-- Redirects to related section on button click -->
+                <a href="#home"><button id="home-button">ANASAYFA</button></a>
+            </div>
+            <div>
+                <a href="#about"><button id="about-button">HAKKIMDA</button></a>
+            </div>
+            <div>
+                <a href="#contact"><button id="contact-button-2"
+                        style="padding-left: 14px; padding-right: 14px;">İLETİŞİM</button></a>
+            </div>
+            <div>
+                <a href="#services"><button id="services-button">HİZMETLER</button></a>
+            </div>
+            <div>
+                <a href="#comments"><button id="comments-button"
+                        style="padding-left: 19px; padding-right: 19px;">GÖRÜŞ</button></a>
+            </div>
+            <div>
+                <a href="#gallery"><button id="gallery-button"
+                        style="padding-left: 17px; padding-right: 17px;">GALERİ</button></a>
+            </div>
+        </div>
+        <!-- Right part of the header -->
+        <div class="right-section">
+            <a href="#contact"><button>RANDEVU
+                    ALIN</button></a>
+        </div>
+    </div>
+    <!-- End of Header -->
+    <!-- Page content section -->
+    <div class="main">
+        <!-- About me section -->
+        <div id="about" class="about">
+            <div class="about-title">HAKKIMDA</div>
+            <!-- About section => This div arranges the contents side by side and sets positions -->
+            <div class="about-section">
+                <!-- A few words -->
+                <div class="about-text">
+                    <img class="about-logo" src="images/id-card.png">
+                    <b>
+                        <p>BİRKAÇ KELİME İLE...</p>
+                    </b>
+                    <p>Dyt.Ad Soyad; Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis maxime quisquam
+                        architecto assumenda nostrum ullam eligendi ad doloribus enim.</p>
+                </div>
+                <!-- Schools / Educations -->
+                <div class="education-text">
+                    <img class="education-logo" src="images/open-book.png">
+                    <b>
+                        <p>OKULLAR / EĞİTİMLER</p>
+                    </b>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, quos?</p>
+                </div>
+                <!-- Interests -->
+                <div class="interest-text">
+                    <img class="interest-logo" src="images/heart-beat.png">
+                    <b>
+                        <p>İLGİ ALANLARI</p>
+                    </b>
+                    <ul class="interest-list">
+                        <li>Şişmanlık (Obezite)</li>
+                        <li>Kilo Problemi</li>
+                        <li>Diyabet (Şeker Hastalığı)</li>
+                        <li>Aşırı Kilo Alımı</li>
+                        <li>Hiperlipidemi</li>
+                        <li>Tip 1 Diyabet</li>
+                        <li>Gut Hastalığı ve Beslenme</li>
+                        <li>İnsülin Direnci ve Metabolik Sendrom</li>
+                        <li>Tip 2 Diyabet</li>
+                        <li>Anoreksiya ve Bulimia Hastalarında Beslenme</li>
+                        <li>Kilo Verme Diyetleri</li>
+                        <li>Kilo Alma Diyetleri</li>
+                        <li>Zayıflama Diyetleri</li>
+                        <li>Sporcu Beslenmesi</li>
+                        <li>Çocuk ve Ergenlerde Kilo Kontrolü</li>
+                        <li>Troid Hastalıklarında Beslenme</li>
+                        <li>Sağlıklı Beslenme</li>
+                        <li>Kalp Damar Hastalıkları ve Beslenme</li>
+                        <li>Çocuk ve Adölesanlarda Beslenme</li>
+                        <li>Çocuk Beslenmesi</li>
+                        <li>Reaktif Hipoglisemi ve Beslenme</li>
+                        <li>Metabolik Hastalıklarda Beslenme</li>
+                        <li>Zayıflama Programı</li>
+                        <li>Yaşam Koçluğu</li>
+                        <li>Bebek Beslenmesi</li>
+                        <li>Obezite</li>
+                        <li>İrritabl Bağırsak Sendromu</li>
+                    </ul>
+                    <!-- Show all interests button -->
+                    <button class="show-everything-button" onclick="toggleList()">TÜMÜNÜ GÖSTER</button>
+                </div>
+                <!-- Social Media Accounts -->
+                <div class="social-media-text">
+                    <img class="social-media-logo" src="images/social-media.png">
+                    <b>
+                        <p>SOSYAL MEDYA HESAPLARI</p>
+                    </b>
+                    <a href="#" target="_blank"><img class="social-media-image" src="images/instagram.png"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End of About me -->
+        <!-- Appointment section -->
+        <div id="contact" class="schedule">
+            RANDEVU ALIN
+            <!-- Schedule section => This div sets the background and positions of the contents -->
+            <div class="schedule-section">
+                <!-- Schedule container => This div arranges the positions of address and map -->
+                <div class="schedule-container">
+                    <!-- Address section -->
+                    <div class="adress-container">
+                        <p class="clinic-name">Klinik Adı</p>
+                        <p class="adress">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, maiores?
+                        </p>
+                        <div class="contact-text">
+                            İLETİŞİME GEÇ:
+                            <p><img class="call-image" src="images/call-image.png">+90 *** *** ** **</p>
+                            RANDEVU AL:
+                            <p><img class="call-image" src="images/call-image.png">+90 *** *** ** **</p>
+                        </div>
+                    </div>
+                    <!-- Map section configured with Leaflet; imported in head at lines 12 and 14, JS code is in script.js -->
+                    <div id="map"></div>
+                </div>
+                <!-- Appointment time selection section -->
+                <div class="date-container">
+                    Uygun bir zaman seç ve randevu al
+                    <!-- Date picker => Created to align dates in column format -->
+                    <div class="date-picker">
+                        <!-- Dates => Created to adjust space and position between days -->
+                        <div class="dates">
+                            <div class="date">
+                                <span>PAZARTESİ</span>
+                                <span>08.07</span>
+                            </div>
+                            <!-- Thin line between columns -->
+                            <hr style="border: 1px solid rgb(18, 46, 83); border-radius: 5px; margin: 0px;">
+                            <div class="date">
+                                <span>SALI</span>
+                                <span>09.07</span>
+                            </div>
+                            <hr style="border: 1px solid rgb(18, 46, 83); border-radius: 5px; margin: 0px;">
+                            <div class="date">
+                                <span>ÇARŞAMBA</span>
+                                <span>10.07</span>
+                            </div>
+                            <hr style="border: 1px solid rgb(18, 46, 83); border-radius: 5px; margin: 0px;">
+                            <div class="date">
+                                <span>PERŞEMBE</span>
+                                <span>11.07</span>
+                                <!-- Appointment time selection button -->
+                                <button class="time-button">10:00</button>
+                            </div>
+                            <hr style="border: 1px solid rgb(18, 46, 83); border-radius: 5px; margin: 0px;">
+                            <div class="date">
+                                <span>CUMA</span>
+                                <span>12.07</span>
+                                <button class="time-button">13:00</button>
+                                <button class="time-button">13:20</button>
+                                <button class="time-button">13:40</button>
+                                <button class="time-button">14:00</button>
+                                <button class="time-button">14:20</button>
+                                <button class="time-button">15:30</button>
+                                <button class="time-button">15:50</button>
+                                <button class="time-button">16:10</button>
+                                <button class="time-button">16:30</button>
+                                <button class="time-button">16:50</button>
+                                <button class="time-button">17:10</button>
+                            </div>
+                            <hr style="border: 1px solid rgb(18, 46, 83); border-radius: 5px; margin: 0px;">
+                            <div class="date">
+                                <span>CUMARTESİ</span>
+                                <span>13.07</span>
+                                <button class="time-button">09:00</button>
+                                <button class="time-button">09:20</button>
+                                <button class="time-button">10:45</button>
+                                <button class="time-button">11:05</button>
+                                <button class="time-button">11:25</button>
+                                <button class="time-button">11:45</button>
+                                <button class="time-button">12:05</button>
+                                <button class="time-button">12:25</button>
+                                <button class="time-button">12:45</button>
+                                <button class="time-button">15:15</button>
+                                <button class="time-button">15:35</button>
+                            </div>
+                            <hr style="border: 1px solid rgb(18, 46, 83); border-radius: 5px; margin: 0px;">
+                            <div class="date">
+                                <span>PAZAR</span>
+                                <span>14.07</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="show-details-button"><b>AYRINTILI İNCELE</b></a>
+                </div>
+            </div>
+        </div>
+        <!-- End of Appointment section -->
+        <!-- Services section -->
+        <div id="services" class="services">
+            <div>HİZMETLER</div>
+            <!-- Positioning for the services section -->
+            <div class="services-container">
+                <!-- Search in the table -->
+                <input type="text" id="search" placeholder="Tabloda ara" onkeyup="searchTable()">
+                <!-- Positioning for accordion menu -->
+                <div id="accordion">
+                    <!-- Thin white line between categories -->
+                    <div class="accordion-item">
+                        <!-- Accordion header -->
+                        <div class="accordion-header" onclick="toggleAccordion(this)">Metabolik Hastalıklar +
+                        </div>
+                        <!-- Accordion content -->
+                        <div class="accordion-content">
+                            <p>İnsülin Direnci ve Metabolik Sendrom</p>
+                            <p>Metabolik Hastalıklarda Beslenme</p>
+                            <p>Hipertansiyonda Beslenme</p>
+                            <p>Haşimato Hastalığında Beslenme</p>
+                            <p>Gıda İntoleransı Tedavisi</p>
+                            <p>Gut Hastalığı ve Beslenme</p>
+                            <p>Tiroid Hastalıklarında Beslenme</p>
+                            <p>Diyabet Diyeti</p>
+                            <p>Reaktif Hipoglisemi ve Beslenme</p>
+                            <p>Menopozda Beslenme</p>
+                            <p>Tüp Bebek ve İnfertilite Tedavisinde Beslenme</p>
+                            <p>Gebelik ve Beslenme</p>
+                            <p>Gebelik ve Emziklilikte Beslenme</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">Kilo Yönetimi +</div>
+                        <div class="accordion-content">
+                            <p>Obezite</p>
+                            <p>Kişiye Özel Beslenme Programları</p>
+                            <p>Kişiye Özel Diyetler</p>
+                            <p>Detoks</p>
+                            <p>Alkali Diyet</p>
+                            <p>Kilo Alma Diyetleri</p>
+                            <p>Zayıflama Programı</p>
+                            <p>Zayıflama Diyetleri</p>
+                            <p>Zayıflama</p>
+                            <p>Kilo Verme Diyetleri</p>
+                            <p>Çocuk ve Ergenlerde Kilo Kontrolü</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">Sağlıklı Yaşam +</div>
+                        <div class="accordion-content">
+                            <p>Sağlıklı Yaşam Danışmanlığı</p>
+                            <p>Sağlıklı Beslenme</p>
+                            <p>Diyetisyen Randevusu</p>
+                            <p>Online Danışmanlık</p>
+                            <p>Randevu</p>
+                            <p>Online Diyet</p>
+                            <p>Normal Randevu</p>
+                            <p>Kontrol Randevusu</p>
+                            <p>Mikrobiyota Düzenleme</p>
+                            <p>Çocuk ve Adölesanlarda Beslenme</p>
+                            <p>Sporcu Beslenmesi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of services -->
+        <!-- Comments section -->
+        <div id="comments" class="comments-show"></div>
+        <!-- Comments show => Created this div to fix margin issue when clicking comments in header -->
+        <!-- For comments section header -->
+        <div class="comments">
+            <div>HASTA VE DANIŞAN GÖRÜŞLERİ</div>
+            <!-- Comments container => Created to position comment boxes -->
+            <div class="comments-container">
+                <!-- Comments box => Created to style each comment box -->
+                <div class="comments-box">
+                    <!-- Divided into header and content for accordion style -->
+                    <!-- Header part -->
+                    <div class="comments-header">
+                        <span>Dyt. Hanım ile bir görüşme daha geçirdim.</span>
+                        <!-- Toggle button => Created to open/close accordion menu -->
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <!-- Content part -->
+                    <div class="comments-content">
+                        Yine ayrıntılı açıklamaları, ayrıntılı analizleri ve diyet önerileri ile bir kez daha
+                        beni bilgisi ve ilgisi yönünden tatmin etti. Danışanı ile çok güzel empati kuruyor ve
+                        güven veriyor. Çok teşekkür ediyorum ve Dyt. hanımı tek geçiyorum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. hanım gerçekten çok ilgili bir diyetisyen.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Sürekli mesajlar ve aramalarıyla diyet sürecimi destekledi. Kendisiyle 1 ayda 8 kilo
+                        verdim. Kan değerlerim düzeldi ve iç organ yağlanmam da azaldı. Kendisine çok teşekkür
+                        ediyorum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Kendisinden çok memnun kaldım.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Uyguladığı program sayesinde haftada 2 kilo verdim ve çok memnunum. Dyt. Hanım'ı tavsiye
+                        üzerine doğumdan sonrasındaki kilolarımı vermek amacıyla tercih ettim. Yemeye meraklı
+                        bir insan olduğum için listelerimi uygularken zorlandım nefsi bir durum. Dyt. Hanım'a
+                        çok teşekkür ediyorum. Kendisi çok başarılı birisi. Başarılarının devamını diliyorum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. Hanım gayet ilgili ve alakalıydı.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Kendisi çok güzel ilgilenmesi ve kibar yaklaşımı var. Kesin çözüme ulaştırarak sıkmadan
+                        bunaltmadan kilo verebiliyorsunuz. İrem Hanım'a tavsiye üzerine görüşme sağladım.
+                        Kendisiyle kilo vermek amacıyla görüşme sağladım ve devam ediyorum. Diyet listelerimi
+                        bana özel hazırlanıyor kendime göre ayarladığı için çok zorluk yaşamadım.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. Hanım'a 2 haftadır gidiyorum yeni danışanıyım.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        2 haftada çok diyet listeme uymamama rağmen 1.8 kg yağdan kilo verdim. Kendisinden çok
+                        memnunum ve normal kiloma gelene devam etmeyim planlıyorum. diyet listelerimde
+                        yiyebileceğim yemeyeceklerimi tek tek sorarak hazırlıyor. Çalışıyor olduğum için evde
+                        yapıp iş yerime getirebileceğim yiyecekler öneriyor. Personel yemekleriyle kıyaslıyor
+                        hangilerinin benim için uygun olur yapabilirim şeklinde sağ olsun beni dinliyor. Dyt.
+                        Hanım çok samimi çok candan birisi. En çok sıcakkanlı olması ve fikrime dikkat etmesi
+                        benim için çok önemli. Ben yemem, yapamam dediğim zaman alternatifler bulalım demesi çok
+                        cazip bir durum. Uymak zorundasınız şeklinde yaptırımı yok yıldırmayacağını düşünüyorum
+                        o yüzden devam etmeyi planlıyorum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. Hanım'ı tanıyorum kendisi sağ olsun çok yardımcı oldu.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Kendisi ilgili bir uzman. Neyi nasıl yapılacağını çok güzle bir şekilde anlatıyor. Bana
+                        ve sağlığıma faydalı olanı ve sağlığıma daha kolay kavuşabileceğim şeyleri zora sokmadan
+                        bunu yememelisin bunu yapmamalısın diyerek değil böyle yaparsanız böyle olur diyor o
+                        yönü çok etkili çok güzel. Nasıl kilo verebileceğimi, su içmenin önemini anlatıyor.
+                        İnsanlığının dışında diyetisyenliğide çok güzel. Diyet listelerimi bana özel olarak önce
+                        kilomu tarttıktan sonra bana netin daha iyi geleceğine birlikte karar verip
+                        hazırlıyoruz. Herhangi bir sağlık problemim yok sadece fazla kiloluyum. Dyt. Hanım'la
+                        biz daha çok yeniyiz. 1 seans görüşme sağladım küçük bir operasyon geçirdiğim için
+                        gidemedim ama inşallah devam edeceğiz.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. hanimla ikinci haftamız geride bıraktık kendisi gayet güler yüzlü ve ilgili
+                            verdiği listeler ile zorlanmadan kilo verebilirsiniz.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Kendisine çok teşekkür ediyorum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. hanım güler yüzüyle ve tatlı dile ile gerçekten işini çok seven ve iyi yapan
+                            bir diyetisyen.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Çok hızlı kilo vermeye başladım kontrollerimiz çok keyifli geçiyor diyet yapmaktan
+                        hoşlanmayan çabuk sıkılan kişilere kesinlikle tavsiye ediyorum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. Hanım'a klinik üzerinden ulaşarak sağlıklı yaşam amacıyla ve tabi ki kilo
+                            verebilmek için görüşme sağladım.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Kendisi oldukça ilgiliydi, her türlü detaya hakimdi. Diyet listelerimi en ince detayına
+                        kadar görüşüp bana uygun olarak hazırlandı. Yeni başladığımız bir çalışma ama oldukça
+                        olumlu gidiyor. Kendisinden aldığım seanslardan şu anda memnunum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. hanımla 3. görüşmemiz. Gerçekten hem ilgisi, hem açıklamaları ile çok kibar
+                            bir yaklaşım sergiliyor.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Enerjisi ile sağlıklı bir beslenme düzeyine ayak uydurmamak, kilo
+                        vermemek imkansız. 2 hafta da 4 kilo verdim bile. Kendisine çok teşekkür ediyorum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. Hanım'dan memnun kaldım.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Kendisini herkese tavsiye ederim. Dyt. Hanım'a araştırma üzerine kilo vermek amacıyla
+                        görüşme sağladım. kendisinden 2-3 seans danışmanlık hizmeti aldım ve devam ediyorum.
+                        Diyet listelerimi bana ekonomik durumuma özel nasıl kilo verebilirim, neleri sevdiğime
+                        göre hazırladı uygularken zorluk yaşamıyorum. Dyt. Hanım iyi, ilgili birisi. Kendisine
+                        teşekkür ederim.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+                <div class="comments-box">
+                    <div class="comments-header">
+                        <span>Dyt. Hanım'dan memnunum.</span>
+                        <button class="toggle-button">+</button>
+                    </div>
+                    <div class="comments-content">
+                        Şu anda diyetim iyi gidiyor ve devam ediyorum. Kendisinin ilgisi, alakası çok iyi ve
+                        gayet güzel ilgilendi. Evlendikten sonra kilo problemi vardı tavsiye üzerine kendisiyle
+                        görüşme sağladım. 3 seans danışmanlık hizmeti aldım ve devam ediyorum. Kendisiyle
+                        iletişimdeyiz. Çalışan birisiyim diyet listelerimi bana kolaylık olsun diye benim
+                        saatlerime göre ayarladı. Kendisinden aldığım danışmanlık hizmetinden çok memnunum.
+                        <img class="rate-image" src="images/rate-image.png">
+                    </div>
+                </div>
+            </div>
+            <!-- Show all comments button -->
+            <button class="show-more-button" onclick="toggleComments()">TÜMÜNÜ GÖSTER</button>
+        </div>
+        <!-- End of comments -->
+        <!-- Gallery section -->
+        <div id="gallery" class="gallery-show"></div>
+        <!-- Gallery show => Created this div to fix margin issue when clicking gallery in header -->
+        <!-- For gallery section header -->
+        <div class="gallery">
+            <div>GALERİ</div>
+            <!-- Gallery container => To position images in gallery -->
+            <div class="gallery-container">
+                <div>
+                    <a href="images/gallery_1.png" target="_blank" title="Resmi yeni sekmede aç">
+                        <img src="images/gallery_1.png">
+                    </a>
+                </div>
+                <div>
+                    <a href="images/gallery_2.png" target="_blank" title="Resmi yeni sekmede aç">
+                        <img src="images/gallery_2.png">
+                    </a>
+                </div>
+                <div>
+                    <a href="images/gallery_3.png" target="_blank" title="Resmi yeni sekmede aç">
+                        <img src="images/gallery_3.png">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of gallery -->
+        <!-- End of profile section -->
+        <div class="end-profile">
+            <div>
+                <img class="end-profile-image" src="images/profile_photo.jpeg">
+            </div>
+            <div class="end-text">
+                Randevu almak ister misiniz?
+            </div>
+            <div>
+                <!-- Profile buttons section => To position the "Randevu Alın" and "İletişim Kurun" buttons -->
+                <div class="profile-buttons-section">
+                    <a href="#contact"><button class="date-button">RANDEVU
+                            ALIN</button></a>
+                    <a href="#contact"><button class="contact-button">İLETİŞİM KURUN</button></a>
+                </div>
+            </div>
+            <!-- End => Button div for scrolling to top of page -->
+            <div class="end">
+                <!-- Scroll to top button -->
+                <button onclick="topFunction()" id="scrollTopButton" title="Sayfa başına git">
+                    <!-- Up arrow icon taken from Font Awesome -->
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+        <!-- End of profile section -->
+        <!-- Footer section -->
+        <div class="footer">
+            SON GÜNCELLEME ZAMANI: ****-**-** GÜNCELLEYEN DYT. ADI SOYADI
+        </div>
+        <!-- End of footer -->
+    </div>
+    <!-- End of page content -->
+    <!-- Import script.js file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
